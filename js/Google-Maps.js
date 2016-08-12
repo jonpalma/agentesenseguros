@@ -4,10 +4,10 @@ $(document).ready(function () {
 });
 
 function initialize() {
-    if( $('#googleMap').attr('position') == 'fechac' ) {
-        var $lat = 28.604013,
-            $long = -106.120451,
-            $title = 'Fechac Chihuahua';
+    if( $('#googleMap').attr('position') == 'agentes' ) {
+        var $lat = 28.651633,
+            $long = -106.131215,
+            $title = 'Agentes en Seguros';
     }
 
     var map_canvas = document.getElementById('googleMap');
@@ -34,23 +34,4 @@ function initialize() {
         /*window.location.href = this.url;*/
         window.open(this.url,'_blank');
     });
-
-    var markerJuarez = new google.maps.Marker({
-        position: new google.maps.LatLng(31.743581, -106.443754),
-        map: map,
-        title: 'Fechac Juárez',
-        url: 'http://maps.google.com/maps?q=loc:'+String(31.743581)+','+String(-106.443754)
-    });
-    
-    google.maps.event.addListener(markerJuarez, 'click', function() {
-        window.open(this.url,'_blank');
-    });
-}
-
-function moveToChihuahua() {
-	map.panTo(new google.maps.LatLng(28.604013, -106.120451));
-}
-
-function moveToJuarez() {
-	map.panTo(new google.maps.LatLng(31.743581, -106.443754));
 }
