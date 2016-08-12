@@ -1,0 +1,372 @@
+/*
+Theme Name: Agentes en Seguros
+Theme URL: http://
+Author: Agencia Mixen
+Author URL: http://mixen.mx/
+Description: Tema para el sitio de Agentes en Seguros.
+Version: 1.0
+Text Domain: Mixen Communication & Web Technology
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800,700,400);
+
+@font-face {
+    font-family: 'Champagne&LimousinesBold';
+    src: url(fonts/Champagne&LimousinesBold.ttf);
+}
+
+@font-face {
+    font-family: 'Champagne&Limousines';
+    src: url(fonts/Champagne&Limousines.ttf);
+}
+
+/* GENERAL STYLES */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.spacing {
+    padding: 100px 10px;
+}
+
+.light-spacing {
+    padding: 50px 10px;
+}
+
+.vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.heading {
+    font-size: 47px;
+    font-weight: 700;
+    margin: 30px 0 50px;
+}
+
+.text {
+    font-size: 26px;
+}
+
+.white {
+    color: #fff;
+}
+
+.blue {
+    color: #212f5e;
+}
+
+.gray {
+    color: #7f7f7f;
+}
+
+/* PRE-HEADER */
+.pre-header .container {
+    height: 112px;
+}
+
+.pre-header .brand-logo {
+    display: 
+}
+
+.pre-header .social p {
+    display: inline-block;
+    position: relative;
+    padding: 15px;
+    border-right: 1px solid #9f9e9f;
+    font-family: 'Champagne&LimousinesBold', sans-serif;
+    text-shadow: 0 1px 0;
+    color: #9f9e9f;
+    font-size: 21px;
+}
+
+.pre-header .social p::before {
+    content: url(img/icons/phone.png);
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+
+.pre-header .social a {
+    position: relative;
+    display: inline-block;
+    top: -3px;
+    margin: 0 5px;
+}
+
+.pre-header .social a:nth-child(2) {
+    margin-left: 15px;
+}
+
+/* NAVBAR */
+.navbar {
+    border: 0;
+}
+
+.navbar.navbar-top {
+    position: absolute;
+    width: 100%;
+    margin-top: 112px;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.navbar .container-fluid {
+    max-width: 1170px;
+}
+
+.navbar .navbar-nav>li {
+    padding: 15px 10px;;
+}
+
+.navbar .navbar-nav>li>a {
+    color: #fff!important;
+    background-color: transparent!important;
+    border-bottom: 3px solid transparent;
+    transition: border 300ms ease;
+    padding: 0px 5px;
+}
+
+.navbar .navbar-nav>li>a:hover,
+.navbar .navbar-nav>li.active>a {
+    border-bottom: 3px solid #fff;
+}
+
+/* BANNER */
+.banner .carousel .item {
+    height: calc(100vh - 112px);
+    overflow: hidden;
+}
+
+.banner .carousel .item img {
+    min-height: 100%;
+    min-width: 100%;
+    max-width: none;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.banner .carousel-control {
+    background-image: none;
+}
+
+.banner .carousel-caption {
+    bottom: auto;
+    position: relative;
+    left: 0;
+    right: 0;
+    height: 100%;
+    text-align: left;
+}
+
+.banner .carousel-caption div[class*=col-] {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    border-left: 4px solid #fff;
+}
+
+.banner .carousel-caption h2 {
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.banner .carousel-caption p,
+.banner .carousel-caption a {
+    font-size: 18px;
+    color: #fff!important;
+}
+
+.banner .carousel-caption a {
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+}
+
+.banner .carousel-caption a:after {
+    content: '\00a0>';
+    position: absolute;
+    top: 1px;
+}
+
+.banner .form-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+}
+
+.banner .form-container>div[class*=col-]:last-child {
+    background-color: #233065;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 484px;
+    position: relative;
+    float: right;
+}
+
+.banner .form-container .row div[class*=col-] {
+    padding: 0;
+}
+
+.banner .form-container .row div[class*=col-]:first-child {
+    padding-right: 5px;
+}
+
+.banner .form-container .row div[class*=col-]:last-child {
+    padding-left: 5px;
+}
+
+.banner .form-container input,
+.banner .form-container textarea {
+    width: 100%;
+    border-radius: 10px;
+    min-height: 50px;
+    padding-left: 15px;
+    border: 0;
+    margin-bottom: 10px;
+}
+
+.banner .form-container textarea {
+    padding-top: 10px;
+}
+
+.banner .form-container input[type=submit] {
+    background-color: #3565b1;
+    color: #fff;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.banner .form-container h2,
+.banner .form-container h5 {
+    margin: 0;
+}
+
+.banner .form-container h2 {
+    font-weight: 800;
+}
+
+.banner .form-container h5 {
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* NUESTRA EMPRESA */
+.empresa {
+    background: url(img/background/empresa.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.empresa div[class*=col] {
+    padding-left: 30px;
+}
+
+.empresa div[class*=col]:before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 230px;
+    position: absolute;
+    background-color: #212f5e;
+    left: 0;
+}
+
+/* SEGUROS */
+.seguros h1 {
+    margin-top: 0;
+    padding: 30px 0;
+    padding-left: 30px;
+    border-left: 4px solid #fff;
+}
+
+.seguros .img-container,
+.seguros h5,
+.seguros p {
+    max-width: 200px;
+}
+
+.seguros .img-container {
+    padding: 30px 0;
+    border-radius: 10px;
+    -webkit-transition: background 300ms ease;
+    -moz-transition: background 300ms ease;
+    transition: background 300ms ease;
+    background-color: rgba(9,20,38,.8);
+    margin-bottom: 30px;
+}
+/*
+.seguros .img-container:hover {
+}
+*/
+.seguros h5 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.seguros p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* SEGUROS CON LOS QUE TRABAJAMOS */
+.socios h1 {
+    margin-top: 0;
+    padding: 30px 0;
+    padding-left: 30px;
+    border-left: 4px solid #7f7f7f;
+}
+
+.socios .col-sm-2 {
+    padding: 0 5px;
+    height: 120px;
+}
+
+/*** Parallax CSS ****/
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+    height: auto;
+}
+
+.parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.parallax img {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    min-width: 1920px;
+    width: 100%;
+    background-position: center; 
+    /* UNIQUE FOR BIF */
+    right: 0;
+}
+
+@media(max-width: 767px) {
+    .empresa {
+        background: none;
+    }
+}
