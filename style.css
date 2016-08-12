@@ -9,6 +9,7 @@ Text Domain: Mixen Communication & Web Technology
 */
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:800,700,400);
+@import 'https://fonts.googleapis.com/css?family=Lato';
 
 @font-face {
     font-family: 'Champagne&LimousinesBold';
@@ -404,12 +405,111 @@ body {
     z-index: 10;
 }
 
-.contacto .form-container h2 {
+.contacto .social-container {
+    margin-top: 30px;
+}
+
+.contacto .form-container h1 {
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 800;
+    padding: 30px 0;
+    padding-left: 30px;
+    border-left: 4px solid #ffffff;
+}
+
+.contacto .form-container .col-sm-5 {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    padding-right: 0;
+    padding-left: 18px;
+}
+
+.contacto .form-container p::before {
+    position: absolute;
+    left: 0;
+}
+
+.contacto .form-container p:first-child::before {
+    content: url(img/icons/pin.png);
+}
+
+.contacto .form-container p:nth-child(2)::before {
+    content: url(img/icons/phonewhite.png);
+}
+
+.contacto .form-container p:nth-child(3)::before {
+    content: url(img/icons/email.png);
+}
+
+.contacto .form-container input[type=text],
+.contacto .form-container input[type=email],
+.contacto .form-container textarea {
+    width: 100%;
+    min-height: 50px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: #ffffff;
+    background-color: transparent;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+.contacto .form-container input[type=submit] {
+    right: 0;
+    border: 0;
+    border-radius: 10px;
+    width: 80px;
+    height: auto;
+    background-color: #ffffff;
+    color: #031335;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+}
+
+/* FOOTER */
+
+footer .footer-top {
+    padding: 30px 0;
+}
+
+footer .social-media {
+    padding-top: 30px;
+}
+
+footer .social-media a {
+    padding: 0 5px;
+}
+
+footer .footer-rights {
+    padding: 10px 0;
+    background-color: #233065;
+    color: #fcfafa;
+}
+
+footer .footer-rights p {
     margin: 0;
 }
 
-.contacto .form-container h2 {
-    font-weight: 800;
+footer .footer-rights .web {
+    color: #fcfcfc;
+    font-family: 'Lato', sans-serif;
+    font-size: 19px;
+}
+
+footer .footer-rights .phone {
+    color: #fbf9f9;
+    font-family: 'Champagne&Limousines', sans-serif;
+    font-size: 19px;
+
+}
+
+footer .footer-rights .phone::before {
+    content: url(img/icons/phonewhite.png);
 }
 
 /*** Parallax CSS ****/
@@ -435,7 +535,9 @@ body {
     bottom: 0;
     min-width: 1920px;
     width: 100%;
-    background-position: center;
+    background-position: center; 
+    /* UNIQUE FOR BIF */
+    right: 0;
 }
 
 @media(max-width: 767px) {

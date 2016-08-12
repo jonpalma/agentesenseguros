@@ -194,17 +194,31 @@
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <section class="contacto" id="contacto">
-        <div class="col-sm-7 map-container">
+        <div class="col-sm-6 map-container">
             <div class="googleMap" id="googleMap" position="agentes"></div>
         </div>
         <div class="container form-container">
             <div class="col-sm-6"></div>
             <div class="col-sm-6 vertical-align">
-                <h2 class="white">Contacto</h2>
-                <input type="text" placeholder="Nombre">
-                <input type="email" placeholder="Correo">
-                <textarea name="mssg" id="mssg" cols="30" rows="5" placeholder="Mensaje"></textarea>
-                <input type="submit" value="Enviar">
+                <h1 class="heading white">Contacto</h1>
+                <div class="col-sm-7 white">
+                    <input type="text" placeholder="Nombre">
+                    <input type="email" placeholder="Correo">
+                    <textarea name="mssg" id="mssg" cols="30" rows="5" placeholder="Mensaje"></textarea>
+                    <div class="text-right">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </div>
+                <div class="col-sm-5 white">
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                    <p>01 800 536 78 96</p>
+                    <p>agentesenseguros.com.mx</p>
+                    <div class="text-right social-container">
+                        <a href=""><img src="img/social/fb-white.png" alt=""></a>
+                        <a href=""><img src="img/social/twitter-white.png" alt=""></a>
+                        <a href=""><img src="img/social/youtube-white.png" alt=""></a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="background"></div>
