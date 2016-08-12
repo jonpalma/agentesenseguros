@@ -188,5 +188,26 @@
             </div>
         </div>
     </div>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <!--/* CONTACTO  */-->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <section class="contacto" id="contacto">
+        <div class="col-sm-6 map-container">
+            <div class="googleMap" id="googleMap" position="agentes"></div>
+        </div>
+        <div class="container form-container">
+            <div class="col-sm-6"></div>
+            <div class="col-sm-6 vertical-align">
+                <h2 class="white">Contacto</h2>
+                <input type="text" placeholder="Nombre">
+                <input type="email" placeholder="Correo">
+                <textarea name="mssg" id="mssg" cols="30" rows="5" placeholder="Mensaje"></textarea>
+                <input type="submit" value="Enviar">
+            </div>
+        </div>
+        <img class="background" src="img/contacto/background.png">
+    </section>
 </div>
 <?php include('footer.php'); ?>
