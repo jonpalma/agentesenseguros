@@ -194,7 +194,7 @@
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <section class="contacto" id="contacto">
-        <div class="col-sm-6 map-container">
+        <div class="col-sm-7 map-container">
             <div class="googleMap" id="googleMap" position="agentes"></div>
         </div>
         <div class="container form-container">
@@ -207,7 +207,7 @@
                 <input type="submit" value="Enviar">
             </div>
         </div>
-        <img class="background" src="img/contacto/background.png">
+        <div class="background"></div>
     </section>
 </div>
 <?php include('footer.php'); ?>
