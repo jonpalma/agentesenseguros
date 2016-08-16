@@ -8,13 +8,7 @@
     </div>
     <div class="text-center footer-rights">
         <p>
-            Copyright 2016
-        </p>
-        <p>
-            Todos los derechos recervados Agentes / Consultores en seguros. | Design by: <a href="http://mixen.mx"><img src="http://mixen.mx/firma/logo-mixen.png" alt="Agencia Mixen"> mixen.mx</a>
-        </p>
-        <p>
-            <span class="web">agentesenseguros.com.mx</span>
+            Todos los derechos recervados Agentes / Consultores en seguros <?php echo date('Y'); ?> | Design by: <a href="http://mixen.mx"><img src="http://mixen.mx/firma/logo-mixen.png" alt="Agencia Mixen"> mixen.mx</a>
         </p>
         <p>
             <span class="phone">01 800 456 89 12</span>

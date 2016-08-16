@@ -22,54 +22,21 @@
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <section class="banner" id="banner">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <div class="img-container">
-                        <img src="img/banner/1.jpg" alt="Banner">
-                    </div>
-                    <div class="carousel-caption">
-                        <div class="container vertical-align">
-                            <div class="col-sm-6">
-                                <h2 class="white">Lorem ipsum dolor sit amet, consectetuer adipiscing.</h2>
-                                <p class="white">
-                                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                                </p>
-                                <a href="">Ver mas</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="img-container">
-                        <img src="img/banner/2.jpg" alt="Banner">
-                    </div>
-                    <div class="carousel-caption">
-                        <div class="container vertical-align">
-                            <div class="col-sm-6">
-                                <h2 class="white">Lorem ipsum dolor sit amet, consectetuer adipiscing.</h2>
-                                <p class="white">
-                                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                                </p>
-                                <a href="">Ver mas</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
                     <div class="img-container">
                         <img src="img/banner/3.jpg" alt="Banner">
                     </div>
                     <div class="carousel-caption">
                         <div class="container vertical-align">
                             <div class="col-sm-6">
-                                <h2 class="white">Lorem ipsum dolor sit amet, consectetuer adipiscing.</h2>
+                                <h2 class="white">Seguro de Casa-Habitación.</h2>
                                 <p class="white">
-                                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                    Cuidamos tu patrimonio.
                                 </p>
-                                <a href="">Ver mas</a>
                             </div>
                         </div>
                     </div>
@@ -81,11 +48,40 @@
                     <div class="carousel-caption">
                         <div class="container vertical-align">
                             <div class="col-sm-6">
-                                <h2 class="white">Lorem ipsum dolor sit amet, consectetuer adipiscing.</h2>
+                                <h2 class="white">Seguro de Vida.</h2>
                                 <p class="white">
-                                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                    Entendemos tus prioridades.
                                 </p>
-                                <a href="">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img-container">
+                        <img src="img/banner/2.jpg" alt="Banner">
+                    </div>
+                    <div class="carousel-caption">
+                        <div class="container vertical-align">
+                            <div class="col-sm-6">
+                                <h2 class="white">Seguro de Auto.</h2>
+                                <p class="white">
+                                    Te atendemos primero cuando lo necesitas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img-container">
+                        <img src="img/banner/1.jpg" alt="Banner">
+                    </div>
+                    <div class="carousel-caption">
+                        <div class="container vertical-align">
+                            <div class="col-sm-6">
+                                <h2 class="white">Seguro de Gastos Médicos Mayores.</h2>
+                                <p class="white">
+                                    Estamos ahí para ti.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -93,19 +89,19 @@
                 <div class="container form-container">
                     <div class="col-sm-6"></div>
                     <div class="col-sm-6 vertical-align">
-                        <h2 class="white">Te Cotizamos</h2>
-                        <h5 class="white">Conoce el seguro ideal para ti</h5>
+                        <h2 class="white">Cotiza tu seguro</h2>
+                        <h5 class="white">Tenemos la opción ideal para ti</h5>
+                        <input type="text" placeholder="Nombre Completo">
                         <div class="row no-margin">
                             <div class="col-sm-6">
-                                <input type="text" placeholder="Nombre">
+                                <input type="email" placeholder="Correo electrónico">
                             </div>
                             <div class="col-sm-6">
-                                <input type="text" placeholder="Apellidos">
+                                <input type="text" placeholder="Tel./Cel.">
                             </div>
                         </div>
-                        <input type="email" placeholder="Correo electrónico">
                         <input type="text" placeholder="Tipo de seguro">
-                        <textarea name="mssg" id="mssg" cols="30" rows="5" placeholder="Información detallada"></textarea>
+                        <textarea name="mssg" id="mssg" cols="30" rows="5" placeholder="Información complementaria"></textarea>
                         <input type="submit" value="Enviar información">
                     </div>
                 </div>
@@ -142,12 +138,9 @@
     <!--/* SEGUROS  */-->
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-    <section class="parallax-container seguros" id="seguros">
-        <div class="parallax">
-            <img src="img/background/parallax1.jpg" alt="Parallax">
-        </div>
-        <div class="container light-spacing">
-            <h1 class="heading white">Conoce los tipos de <br>seguro que ofrecemos</h1>
+    <section class="seguros" id="seguros">
+        <div class="container spacing">
+            <h1 class="heading white">Conoce los tipos de <br>seguros que ofrecemos</h1>
             <div class="row no-margin text-center">
                 <div class="col-sm-3 col-xs-6">
                     <div class="img-container">
@@ -194,6 +187,34 @@
                     </p>
                 </div>
             </div>
+        </div>
+        <div id="carousel-seguros" class="carousel slide" data-ride="carousel">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="img/banner/5.jpg" alt="Banner">
+                </div>
+                <div class="item">
+                    <img src="img/banner/6.jpg" alt="Banner">
+                </div>
+                <div class="item">
+                    <img src="img/banner/7.jpg" alt="Banner">
+                </div>
+                <div class="item">
+                    <img src="img/banner/8.jpg" alt="Banner">
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-seguros" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-seguros" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </section>
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -246,13 +267,13 @@
                     </div>
                 </div>
                 <div class="col-sm-5 white">
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                    <p>
+                        Periférico de la Juventud 4101 / local 28,<br>
+                        Plaza San Ángel,<br>
+                        Chihuahua, Chihuahua.
+                    </p>
                     <p>01 800 536 78 96</p>
-                    <p>agentesenseguros.com.mx</p>
-                    <div class="text-right social-container">
-                        <a href="https://www.facebook.com/Agentes-Consultores-en-Seguros-276182349421750" target="_blank"><img src="img/social/fb-white.png" alt=""></a>
-                        <a href="https://www.instagram.com/agentesenseguros/" target="_blank"><img src="img/social/instagram-white.png" alt="instagram"></a>
-                    </div>
+                    <p>contacto@agentesenseguros.com.mx</p>
                 </div>
             </div>
         </div>

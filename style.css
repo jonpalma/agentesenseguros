@@ -78,12 +78,26 @@ input[type=email],
 input[type=submit],
 textarea {
     outline: none!important;
+    resize: none;
 }
 
 input[type=text]:focus,
 input[type=email]:focus,
 textarea:focus {
     box-shadow: 3px 3px 3px 3px rgba(0,0,0,.3);
+}
+
+.carousel-control {
+    width: 8vw;
+    min-width: 50px;
+}
+
+.carousel-control.left span {
+    left: 30px;
+}
+
+.carousel-control.right span {
+    right: 30px;
 }
 
 /* PRE-HEADER */
@@ -124,6 +138,7 @@ textarea:focus {
 /* NAVBAR */
 .navbar {
     border: 0;
+    z-index: 9999!important;
 }
 
 .navbar-brand {
@@ -219,6 +234,7 @@ textarea:focus {
     position: absolute;
     min-height: 100%;
     min-width: 100%;
+    max-width: 100%;
 }
 
 .banner .carousel .item img {
@@ -234,6 +250,7 @@ textarea:focus {
 
 .banner .carousel-control {
     background-image: none;
+    z-index: 15;
 }
 
 .banner .carousel-caption {
@@ -243,6 +260,7 @@ textarea:focus {
     right: 0;
     height: 100%;
     text-align: left;
+    min-height: 220px;
 }
 
 .banner .carousel-caption div[class*=col-] {
@@ -255,6 +273,7 @@ textarea:focus {
 .banner .carousel-caption h2 {
     font-weight: 700;
     font-size: 36px;
+    margin-top: 0;
 }
 
 .banner .carousel-caption p,
@@ -281,6 +300,10 @@ textarea:focus {
     left: 0;
     right: 0;
     height: 100%;
+}
+
+.banner .form-container .vertical-align {
+    z-index: 10;
 }
 
 .banner .form-container>div[class*=col-]:last-child {
@@ -360,6 +383,15 @@ textarea:focus {
 }
 
 /* SEGUROS */
+.seguros {
+    position: relative;
+}
+
+.seguros .container {
+    position: relative;
+    z-index: 10;
+}
+
 .seguros h1 {
     margin-top: 0;
     padding: 30px 0;
@@ -410,6 +442,40 @@ textarea:focus {
 .seguros .row > [class*='col-'] {
     display: flex;
     flex-direction: column;
+}
+
+.seguros .carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.seguros .carousel,
+.seguros .carousel-inner,
+.seguros .carousel .item {
+    height: 100%;
+}
+
+.seguros .carousel .item {
+    overflow: hidden;
+}
+
+.seguros .carousel .item img {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    max-width: none;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.seguros .carousel-control {
+    z-index: 10;
+    background-image: none;
 }
 
 /* SEGUROS CON LOS QUE TRABAJAMOS */
@@ -579,13 +645,14 @@ footer .footer-rights .web {
 
 footer .footer-rights .phone {
     color: #fbf9f9;
-    font-family: 'Champagne&Limousines', sans-serif;
-    font-size: 19px;
 
 }
 
 footer .footer-rights .phone::before {
     content: url(img/icons/phonewhite.png);
+    position: relative;
+    left: -3px;
+    top: 3px;
 }
 
 /*** Parallax CSS ****/
@@ -730,15 +797,15 @@ footer .footer-rights .phone::before {
     }
     .banner .carousel-caption,
     .banner .form-container {
-        height: auto;
-        padding-left: 10px;
-        padding-right: 10px;
-        max-width: 85%;
     }
     .banner .form-container {
         position: relative;
         top: auto;
         margin-bottom: 30px;
+        height: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 85%;
     }
     .banner .form-container>div[class*=col-]:last-child {
         float: none;
@@ -806,5 +873,35 @@ footer .footer-rights .phone::before {
         top: 0;
         left: 0;
         padding: 0;
+    }
+    footet .footer-rights p {
+        margin: 0;
+    }
+}
+
+@media(max-width: 480px) {
+    .heading {
+        font-size: 24px;
+        padding-top: 10px!important;
+        padding-bottom: 10px!important;
+    }
+    .text {
+        font-size: 16px;
+    }
+    .navbar .navbar-nav>li>a {
+        font-size: 14px;
+        padding: 6px 0;
+    }
+    .banner .carousel-caption h2 {
+        font-size: 26px;
+    }
+    .seguros h5 {
+        font-size: 18px;
+    }
+    .seguros p {
+        font-size: 14px;
+    }
+    .seguros div[class*=col-xs-] {
+        width: 100%;
     }
 }
