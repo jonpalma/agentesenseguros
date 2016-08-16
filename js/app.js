@@ -5,3 +5,18 @@ $(window).scroll(function () {
 		$('.navbar').removeClass('navbar-fixed-top');
 	}
 });
+
+$(document).ready(function() {
+    setBannerSize();
+});
+
+$(window).resize(function () {
+    setBannerSize();
+});
+
+function setBannerSize () {
+    $height = $('.banner').height();
+    $('.banner .img-container').css({
+        height: $height+'px'
+    });
+}

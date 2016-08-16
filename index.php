@@ -1,17 +1,17 @@
 <?php include('header.php'); ?>
 <div class="wrapper">
-    <section class="pre-header">
+    <section class="pre-header" id="inicio">
         <div class="container">
-            <div class="col-sm-5 vertical-align">
+            <div class="col-sm-5 hidden-xs vertical-align">
                 <div class="brand-logo">
-                    <img src="img/logo.png" alt="Logo">
+                    <a href="#inicio"><img src="img/logo.png" alt="Logo"></a>
                 </div>
             </div>
             <div class="col-sm-7 vertical-align">
                 <div class="social text-right">
                     <p>01 800 456 89 12</p>
-                    <a href=""><img src="img/social/fb.png" alt="facebook"></a>
-                    <a href=""><img src="img/social/instagram.png" alt="instagram"></a>
+                    <a href="https://www.facebook.com/Agentes-Consultores-en-Seguros-276182349421750" target="_blank"><img src="img/social/fb.png" alt="facebook"></a>
+                    <a href="https://www.instagram.com/agentesenseguros/" target="_blank"><img src="img/social/instagram.png" alt="instagram"></a>
                 </div>
             </div>
         </div>
@@ -27,7 +27,9 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img src="img/banner/1.jpg" alt="Banner">
+                    <div class="img-container">
+                        <img src="img/banner/1.jpg" alt="Banner">
+                    </div>
                     <div class="carousel-caption">
                         <div class="container vertical-align">
                             <div class="col-sm-6">
@@ -41,7 +43,41 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="img/banner/1.jpg" alt="Banner">
+                    <div class="img-container">
+                        <img src="img/banner/2.jpg" alt="Banner">
+                    </div>
+                    <div class="carousel-caption">
+                        <div class="container vertical-align">
+                            <div class="col-sm-6">
+                                <h2 class="white">Lorem ipsum dolor sit amet, consectetuer adipiscing.</h2>
+                                <p class="white">
+                                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                </p>
+                                <a href="">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img-container">
+                        <img src="img/banner/3.jpg" alt="Banner">
+                    </div>
+                    <div class="carousel-caption">
+                        <div class="container vertical-align">
+                            <div class="col-sm-6">
+                                <h2 class="white">Lorem ipsum dolor sit amet, consectetuer adipiscing.</h2>
+                                <p class="white">
+                                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                </p>
+                                <a href="">Ver mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img-container">
+                        <img src="img/banner/4.jpg" alt="Banner">
+                    </div>
                     <div class="carousel-caption">
                         <div class="container vertical-align">
                             <div class="col-sm-6">
@@ -91,9 +127,9 @@
     <!--/* NUESTRA EMPRESA  */-->
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-    <div class="section empresa spacing" id="empresa">
+    <div class="section empresa spacing" id="nosotros">
         <div class="container">
-            <div class="col-sm-6">
+            <div class="col-md-6 col-sm-12">
                 <h1 class="heading blue">Nuestra empresa</h1>
                 <p class="text blue text-justify">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
@@ -113,7 +149,7 @@
         <div class="container light-spacing">
             <h1 class="heading white">Conoce los tipos de <br>seguro que ofrecemos</h1>
             <div class="row no-margin text-center">
-                <div class="col-sm-3">
+                <div class="col-sm-3 col-xs-6">
                     <div class="img-container">
                         <img src="img/seguros/1.png" alt="Seguro" class="img-responsive center-block">
                     </div>
@@ -124,7 +160,7 @@
                         esse cillum dolore.
                     </p>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 col-xs-6">
                     <div class="img-container">
                         <img src="img/seguros/2.png" alt="Seguro" class="img-responsive center-block">
                     </div>
@@ -135,7 +171,7 @@
                         esse cillum dolore.
                     </p>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 col-xs-6">
                     <div class="img-container">
                         <img src="img/seguros/3.png" alt="Seguro" class="img-responsive center-block">
                     </div>
@@ -146,7 +182,7 @@
                         esse cillum dolore.
                     </p>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 col-xs-6">
                     <div class="img-container">
                         <img src="img/seguros/4.png" alt="Seguro" class="img-responsive center-block">
                     </div>
@@ -165,7 +201,7 @@
     <!--/* SEGUROS CON LOS QUE TRABAJAMOS  */-->
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-    <div class="section socios spacing" id="socios">
+    <div class="section socios spacing" id="agentes">
         <div class="container">
             <h1 class="heading gray">Seguros con los que <br>trabajamos</h1>
             <div class="row no-margin">
@@ -194,7 +230,7 @@
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <section class="contacto" id="contacto">
-        <div class="col-sm-6 map-container">
+        <div class="col-sm-8 map-container">
             <div class="googleMap" id="googleMap" position="agentes"></div>
         </div>
         <div class="container form-container">
@@ -214,9 +250,8 @@
                     <p>01 800 536 78 96</p>
                     <p>agentesenseguros.com.mx</p>
                     <div class="text-right social-container">
-                        <a href=""><img src="img/social/fb-white.png" alt=""></a>
-                        <a href=""><img src="img/social/twitter-white.png" alt=""></a>
-                        <a href=""><img src="img/social/youtube-white.png" alt=""></a>
+                        <a href="https://www.facebook.com/Agentes-Consultores-en-Seguros-276182349421750" target="_blank"><img src="img/social/fb-white.png" alt=""></a>
+                        <a href="https://www.instagram.com/agentesenseguros/" target="_blank"><img src="img/social/instagram-white.png" alt="instagram"></a>
                     </div>
                 </div>
             </div>

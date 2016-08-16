@@ -43,6 +43,7 @@ body {
 }
 
 .wrapper {
+    max-width: 100vw;
     overflow: hidden;
 }
 
@@ -72,13 +73,22 @@ body {
     color: #7f7f7f;
 }
 
+input[type=text],
+input[type=email],
+input[type=submit],
+textarea {
+    outline: none!important;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,.3);
+}
+
 /* PRE-HEADER */
 .pre-header .container {
     height: 112px;
-}
-
-.pre-header .brand-logo {
-    display: 
 }
 
 .pre-header .social p {
@@ -97,6 +107,7 @@ body {
     display: inline-block;
     position: absolute;
     left: 0;
+    margin-top: 2px;
 }
 
 .pre-header .social a {
@@ -113,6 +124,24 @@ body {
 /* NAVBAR */
 .navbar {
     border: 0;
+}
+
+.navbar-brand {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+    -webkit-transition: opacity 200ms ease;
+    -moz-transition: opacity 200ms ease;
+    transition: opacity 200ms ease;
+}
+
+.navbar-fixed-top .navbar-brand {
+    opacity: 1;
+}
+
+.navbar-brand img {
+    height: 100%;
 }
 
 .navbar.navbar-top {
@@ -140,6 +169,10 @@ body {
     margin: 0!important;
     background-color: rgba(255,255,255,1);
     padding: 10px 0;
+}
+
+.navbar.navbar-fixed-top {
+    border-bottom: 1px solid #e3e3e3;
 }
 
 .navbar.navbar-fixed-top .navbar-collapse {
@@ -182,11 +215,17 @@ body {
     overflow: hidden;
 }
 
+.banner .carousel .img-container {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+}
+
 .banner .carousel .item img {
+    position: relative;
     min-height: 100%;
     min-width: 100%;
     max-width: none;
-    position: absolute;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -332,16 +371,19 @@ body {
 .seguros h5,
 .seguros p {
     max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .seguros .img-container {
-    padding: 30px 0;
+    padding: 30px 10px;
     border-radius: 10px;
     -webkit-transition: background 300ms ease;
     -moz-transition: background 300ms ease;
     transition: background 300ms ease;
     background-color: rgba(9,20,38,.8);
     margin-bottom: 30px;
+    width: 100%;
 }
 /*
 .seguros .img-container:hover {
@@ -355,6 +397,19 @@ body {
 .seguros p {
     font-size: 16px;
     line-height: 24px;
+}
+
+.seguros .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.seguros .row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
 }
 
 /* SEGUROS CON LOS QUE TRABAJAMOS */
@@ -394,6 +449,7 @@ body {
     background: url(img/contacto/background.png) no-repeat left center;
     background-size: cover;
     z-index: 0;
+    pointer-events: none;
 }
 
 .contacto .form-container {
@@ -403,6 +459,11 @@ body {
     height: 500px;
     position: relative;
     z-index: 10;
+    pointer-events: none;
+}
+
+.contacto .form-container .vertical-align {
+    pointer-events: all;
 }
 
 .contacto .social-container {
@@ -491,8 +552,23 @@ footer .footer-rights {
     color: #fcfafa;
 }
 
+footer .footer-rights a {
+    color: #d3d3d3;
+}
+
+footer .footer-rights a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
 footer .footer-rights p {
     margin: 0;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+footer .footer-rights p:first-child {
+    margin-left: 0;
 }
 
 footer .footer-rights .web {
@@ -534,14 +610,200 @@ footer .footer-rights .phone::before {
     position: absolute;
     bottom: 0;
     min-width: 1920px;
+    min-height: 100%;
     width: 100%;
-    background-position: center; 
-    /* UNIQUE FOR BIF */
-    right: 0;
+    background-position: center;
+}
+
+@media(max-width: 992px) {
+    .empresa {
+        background: none;
+    }
 }
 
 @media(max-width: 767px) {
+    .heading {
+        font-size: 35px;
+        padding-top: 15px!important;
+        padding-bottom: 15px!important;
+        margin-bottom: 15px;
+    }
+    .text {
+        font-size: 20px;
+        line-height: normal;
+    }
+    .spacing {
+        padding: 50px 10px;
+    }
+    .pre-header .container {
+        height: 80px;
+    }
+    .pre-header .brand-logo img {
+        height: 40px;
+    }
+    .pre-header .social p {
+        padding-left: 10px;
+        padding-right: 5px;
+        font-size: 14px;
+    }
+    .pre-header .social a {
+        margin: 0;
+    }
+    .pre-header .social a:nth-child(2) {
+        margin-left: 5px;
+    }
+    .navbar.navbar-top {
+        margin-top: 80px;
+        background-color: #fff;
+    }
+    .navbar-brand {
+        padding: 5px 10px;
+        opacity: 1;
+    }
+    .navbar .navbar-header {
+        border-top: 1px solid #e3e3e3;
+        border-bottom: 1px solid #e3e3e3;
+    }
+    .navbar.navbar-fixed-top {
+        padding: 0;
+    }
+    .navbar.navbar-fixed-top .navbar-header {
+        border-top: 0;
+    }
+    .navbar .navbar-collapse {
+        padding: 0;
+    }
+    .navbar .navbar-nav {
+        margin: 0 auto 10px auto;
+        width: 100%;
+    }
+    .navbar .navbar-nav>li {
+        padding: 0;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    .navbar .navbar-nav>li>a {
+        padding: 10px 0;
+        text-align: center;
+        color: #000!important;
+    }
+    .navbar .navbar-nav>li:hover>a,
+    .navbar .navbar-nav>li.active>a {
+        border-bottom-color: #000;
+    }
+    .banner .carousel-caption {
+        position: initial;
+        overflow: visible;
+    }
+    .banner .carousel .item {
+        height: auto;
+        /*position: relative;*/
+        overflow: visible;
+    }
+    .banner .carousel .item img {
+        height: 100vh;
+        position: relative;
+    }
+    .banner .carousel .img-container {
+        overflow: hidden;
+        max-width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .banner .vertical-align {
+        transform: none;
+    }
+    .banner .carousel-caption div[class*=col-] {
+        margin-top: 50px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .banner .carousel-caption h2 {
+        margin: 0;
+        font-size: 30px;
+    }
+    .banner .carousel-caption p,
+    .banner .carousel-caption a {
+        font-size: 17px;
+    }
+    .banner .carousel-caption,
+    .banner .form-container {
+        height: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .banner .form-container {
+        position: relative;
+        top: auto;
+        margin-bottom: 30px;
+    }
+    .banner .form-container>div[class*=col-]:last-child {
+        float: none;
+        margin: 0 auto;
+        padding: 10px 12px;
+    }
+    .banner .form-container .row div[class*=col-] {
+        padding: 0!important;
+    }
+    .banner .form-container input,
+    .banner .form-container textarea {
+        min-height: 25px;
+        height: 35px;
+        border-radius: 5px;
+        margin-bottom: 8px;
+    }
+    .banner .form-container textarea {
+        min-height: 25px;
+        height: 70px;
+    }
+    .banner .form-container h2 {
+        font-size: 25px;
+    }
     .empresa {
         background: none;
+    }
+    .seguros .container {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .seguros .img-container {
+        margin-bottom: 5px;
+    }
+    .seguros p {
+        margin-bottom: 15px;
+    }
+    .socios .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .contacto {
+        padding: 50px 10px;
+        height: 900px;
+    }
+    .contacto input[type=submit] {
+        margin-bottom: 10px;
+    }
+    .contacto .background {
+        width: 100%;
+        background-position: right center;
+        top: 300px;
+    }
+    .contacto .form-container {
+        top: 300px;
+        padding: 0;
+    }
+    .contacto .form-container .social-container {
+        text-align: center;
+    }
+    .contacto .map-container {
+        position: absolute;
+        height: 300px;
+        width: 100%;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        padding: 0;
     }
 }

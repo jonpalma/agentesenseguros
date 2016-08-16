@@ -17,15 +17,19 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+
+                    <a href="#inicio" class="navbar-brand smoothScroll">
+                        <img src="img/logo.png" alt="Logo">
+                    </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav pull-right">
-                        <li class="active"><a href="#">INICIO</a></li>
-                        <li><a href="#">NOSOTROS</a></li>
-                        <li><a href="#">SEGUROS</a></li>
-                        <li><a href="#">AGENTES</a></li>
-                        <li><a href="#">CONTACTO</a></li>
+                        <li class="active"><a href="#inicio" class="smoothScroll">INICIO</a></li>
+                        <li><a href="#nosotros" class="smoothScroll">NOSOTROS</a></li>
+                        <li><a href="#seguros" class="smoothScroll">SEGUROS</a></li>
+                        <li><a href="#agentes" class="smoothScroll">AGENTES</a></li>
+                        <li><a href="#contacto" class="smoothScroll">CONTACTO</a></li>
                     </ul>
                 </div>
             </div>
