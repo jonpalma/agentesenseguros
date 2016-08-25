@@ -65,6 +65,11 @@ body {
     color: #fff;
 }
 
+a.white:hover {
+    color: #e3e3e3;
+    text-decoration: none;
+}
+
 .blue {
     color: #212f5e;
 }
@@ -102,7 +107,17 @@ textarea:focus {
 
 /* PRE-HEADER */
 .pre-header .container {
-    height: 112px;
+    height: 90px;
+}
+
+.pre-header .brand-logo {
+    display: inline-block;
+    height: 50%;
+    height: 50px;
+}
+
+.pre-header .brand-logo img {
+    height: 100%;
 }
 
 .pre-header .social p {
@@ -113,7 +128,7 @@ textarea:focus {
     font-family: 'Champagne&LimousinesBold', sans-serif;
     text-shadow: 0 1px 0;
     color: #9f9e9f;
-    font-size: 21px;
+    font-size: 17px;
 }
 
 .pre-header .social p::before {
@@ -128,7 +143,13 @@ textarea:focus {
     position: relative;
     display: inline-block;
     top: -3px;
-    margin: 0 5px;
+    margin: 0 3px;
+    width: 35px;
+    height: 35px;
+}
+
+.pre-header .social a img {
+    width: 100%;
 }
 
 .pre-header .social a:nth-child(2) {
@@ -162,7 +183,7 @@ textarea:focus {
 .navbar.navbar-top {
     position: absolute;
     width: 100%;
-    margin-top: 112px;
+    margin-top: 90px;
     z-index: 1;
     background-color: transparent;
 }
@@ -226,7 +247,7 @@ textarea:focus {
 
 /* BANNER */
 .banner .carousel .item {
-    height: calc(100vh - 112px);
+    height: calc(100vh - 90px);
     overflow: hidden;
 }
 
@@ -302,17 +323,19 @@ textarea:focus {
     height: 100%;
 }
 
-.banner .form-container .vertical-align {
+.banner .form-container>div[class*=col-]:last-child {
+    padding: 0;
+    position: relative;
     z-index: 10;
 }
 
-.banner .form-container>div[class*=col-]:last-child {
-    background-color: #233065;
+.banner .form-container .form {
+    position: relative;
     border-radius: 10px;
     padding: 20px;
-    max-width: 484px;
-    position: relative;
-    float: right;
+    max-width: 400px;
+    background-color: #233065;
+    margin: 0 auto;
 }
 
 .banner .form-container .row div[class*=col-] {
@@ -328,13 +351,58 @@ textarea:focus {
 }
 
 .banner .form-container input,
+.banner .form-container select,
 .banner .form-container textarea {
     width: 100%;
-    border-radius: 10px;
-    min-height: 50px;
+    border-radius: 8px;
+    min-height: 40px;
     padding-left: 15px;
     border: 0;
+    margin-bottom: 8px;
+    outline: none;
+}
+
+.banner .form-container select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+    font-weight: 400;
+    min-height: auto;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    margin-bottom: 0;
+}
+
+.banner .form-container select::-ms-expand {
+    display: none;
+}
+
+.banner .form-container select:-moz-focusring { 
+    color: transparent;
+    text-shadow: 0 0 0 #000; 
+}
+
+.banner .form-container label {
+    position: relative;
+    display: inherit;
+    margin: 0;
     margin-bottom: 10px;
+}
+
+.banner .form-container label::after {
+    content: '';
+    background: url(img/icons/select.png)no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 15px;
+    width: 15px;
+    height: 8.25px;
+    pointer-events: none;
 }
 
 .banner .form-container textarea {
@@ -355,6 +423,7 @@ textarea:focus {
 
 .banner .form-container h2 {
     font-weight: 800;
+    font-size: 26px;
 }
 
 .banner .form-container h5 {
@@ -370,6 +439,8 @@ textarea:focus {
 
 .empresa div[class*=col] {
     padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
 }
 
 .empresa div[class*=col]:before {
@@ -380,6 +451,48 @@ textarea:focus {
     position: absolute;
     background-color: #212f5e;
     left: 0;
+}
+
+.empresa div[class*=col]:after {
+    content: '';
+    display: block;
+    width: calc(100% + 30px);
+    height: calc(100% + 60px);
+    position: absolute;
+    left: -30px;
+    top: -30px;
+    border: 3px solid #1e2e61;
+}
+
+.top-corner,
+.bottom-corner {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.top-corner {
+    border-top: 3px solid #3767b1;
+    border-right: 3px solid #3767b1;
+}
+
+.bottom-corner {
+    border-bottom: 3px solid #3767b1;
+    border-left: 3px solid #3767b1;
+}
+
+.empresa .top-corner {
+    right: -15px;
+    top: -45px;
+    border-top: 3px solid #3767b1;
+    border-right: 3px solid #3767b1;
+}
+
+.empresa .bottom-corner {
+    left: -45px;
+    bottom: -45px;
+    border-bottom: 3px solid #3767b1;
+    border-left: 3px solid #3767b1;
 }
 
 /* SEGUROS */
@@ -479,6 +592,31 @@ textarea:focus {
 }
 
 /* SEGUROS CON LOS QUE TRABAJAMOS */
+.socios .container {
+    position: relative;
+}
+
+.socios .container:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: calc(100% + 60px);
+    width: calc(100% + 30px);
+    border: 3px solid #1e2e61;
+    top: -30px;
+    left: -15px;
+}
+
+.socios .top-corner {
+    right: -30px;
+    top: -45px;
+}
+
+.socios .bottom-corner {
+    bottom: -45px;
+    left: -30px;
+}
+
 .socios h1 {
     margin-top: 0;
     padding: 30px 0;
@@ -682,6 +820,31 @@ footer .footer-rights .phone::before {
     background-position: center;
 }
 
+@media(max-width: 1366px) {
+    .heading {
+        font-size: 38px;
+    }
+    .text {
+        font-size: 22px;
+    }
+    .banner .form-container .form {
+        max-width: 370px;
+        margin-right: 0;
+    }
+    .seguros img {
+        max-width: 135px;
+    }
+    .seguros h1 {
+        margin-bottom: 20px;
+    }
+    .seguros h5 {
+        font-size: 18px;
+    }
+    .seguros p {
+        font-size: 15px;
+    }
+}
+
 @media(max-width: 992px) {
     .empresa {
         background: none;
@@ -795,9 +958,6 @@ footer .footer-rights .phone::before {
     .banner .carousel-caption a {
         font-size: 17px;
     }
-    .banner .carousel-caption,
-    .banner .form-container {
-    }
     .banner .form-container {
         position: relative;
         top: auto;
@@ -806,6 +966,9 @@ footer .footer-rights .phone::before {
         padding-left: 10px;
         padding-right: 10px;
         max-width: 85%;
+    }
+    .banner .form-container .form {
+        margin: 0 auto;
     }
     .banner .form-container>div[class*=col-]:last-child {
         float: none;
@@ -832,6 +995,10 @@ footer .footer-rights .phone::before {
     .empresa {
         background: none;
     }
+    .empresa div[class*=col-] {
+        margin-left: 45px;
+        margin-right: 15px;
+    }
     .seguros .container {
         padding-left: 25px;
         padding-right: 25px;
@@ -842,9 +1009,14 @@ footer .footer-rights .phone::before {
     .seguros p {
         margin-bottom: 15px;
     }
+    .socios {
+        padding: 100px 0;
+    }
     .socios .container {
         padding-left: 15px;
         padding-right: 15px;
+        margin-left: 45px;
+        margin-right: 45px;
     }
     .contacto {
         padding: 50px 10px;
@@ -855,6 +1027,7 @@ footer .footer-rights .phone::before {
     }
     .contacto .background {
         width: 100%;
+        height: 75%;
         background-position: right center;
         top: 300px;
     }
@@ -874,7 +1047,7 @@ footer .footer-rights .phone::before {
         left: 0;
         padding: 0;
     }
-    footet .footer-rights p {
+    footer .footer-rights p {
         margin: 0;
     }
 }

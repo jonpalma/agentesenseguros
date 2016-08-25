@@ -89,20 +89,30 @@
                 <div class="container form-container">
                     <div class="col-sm-6"></div>
                     <div class="col-sm-6 vertical-align">
-                        <h2 class="white">Cotiza tu seguro</h2>
-                        <h5 class="white">Tenemos la opción ideal para ti</h5>
-                        <input type="text" placeholder="Nombre Completo">
-                        <div class="row no-margin">
-                            <div class="col-sm-6">
-                                <input type="email" placeholder="Correo electrónico">
+                        <div class="form">
+                            <h2 class="white">Cotiza tu seguro</h2>
+                            <h5 class="white">Tenemos la opción ideal para ti</h5>
+                            <input type="text" placeholder="Nombre Completo">
+                            <div class="row no-margin">
+                                <div class="col-sm-6">
+                                    <input type="email" placeholder="Correo electrónico">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" placeholder="Tel./Cel.">
+                                </div>
                             </div>
-                            <div class="col-sm-6">
-                                <input type="text" placeholder="Tel./Cel.">
-                            </div>
+                            <label for="seguro">
+                                <select name="seguro" id="seguro" required>
+                                    <option value="" class="hidden" disabled selected>Tipo de Seguro</option>
+                                    <option value="Seguro de Casa Habitación">Seguro de Casa Habitación</option>
+                                    <option value="Seguro de Vida">Seguro de Vida</option>
+                                    <option value="Seguro de Auto">Seguro de Auto</option>
+                                    <option value="Seguro de Gastos Médicos Mayores">Seguro de Gastos Médicos Mayores</option>
+                                </select>
+                            </label>
+                            <textarea name="mssg" id="mssg" cols="30" rows="4" placeholder="Información complementaria"></textarea>
+                            <input type="submit" value="Enviar información">
                         </div>
-                        <input type="text" placeholder="Tipo de seguro">
-                        <textarea name="mssg" id="mssg" cols="30" rows="5" placeholder="Información complementaria"></textarea>
-                        <input type="submit" value="Enviar información">
                     </div>
                 </div>
             </div>
@@ -126,10 +136,12 @@
     <div class="section empresa spacing" id="nosotros">
         <div class="container">
             <div class="col-md-6 col-sm-12">
+                <div class="top-corner"></div>
                 <h1 class="heading blue">Nuestra empresa</h1>
                 <p class="text blue text-justify">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
                 </p>
+                <div class="bottom-corner"></div>
             </div>
         </div>
     </div>
@@ -139,7 +151,7 @@
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <section class="seguros" id="seguros">
-        <div class="container spacing">
+        <div class="container light-spacing">
             <h1 class="heading white">Conoce los tipos de <br>seguros que ofrecemos</h1>
             <div class="row no-margin text-center">
                 <div class="col-sm-3 col-xs-6">
@@ -224,6 +236,7 @@
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <div class="section socios spacing" id="agentes">
         <div class="container">
+            <div class="top-corner"></div>
             <h1 class="heading gray">Seguros con los que <br>trabajamos</h1>
             <div class="row no-margin">
                 <div class="col-sm-1"></div>
@@ -243,6 +256,7 @@
                 <div class="col-sm-2"><img src="img/socios/10.png" alt="Socio" class="img-responsive center-block vertical-align"></div>
                 <div class="col-sm-1"></div>
             </div>
+            <div class="bottom-corner"></div>
         </div>
     </div>
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -273,7 +287,7 @@
                         Chihuahua, Chihuahua.
                     </p>
                     <p>01 800 536 78 96</p>
-                    <p>contacto@agentesenseguros.com.mx</p>
+                    <p><a href="mailto:contacto@agentesenseguros.com.mx" class="white">contacto@agentesenseguros.com.mx</a></p>
                 </div>
             </div>
         </div>
