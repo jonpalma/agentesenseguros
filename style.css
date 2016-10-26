@@ -120,6 +120,10 @@ textarea:focus {
     height: 100%;
 }
 
+.pre-header .social {
+    height: 90px;
+}
+
 .pre-header .social p {
     display: inline-block;
     position: relative;
@@ -136,10 +140,10 @@ textarea:focus {
     display: inline-block;
     position: absolute;
     left: 0;
-    margin-top: 2px;
+    margin-top: 15px;
 }
 
-.pre-header .social a {
+.pre-header .social .col-xs-2 a {
     position: relative;
     display: inline-block;
     top: -3px;
@@ -152,14 +156,14 @@ textarea:focus {
     width: 100%;
 }
 
-.pre-header .social a:nth-child(2) {
-    margin-left: 15px;
+.pre-header .social .col-xs-2 {
+    padding: 0;
 }
 
 /* NAVBAR */
 .navbar {
     border: 0;
-    z-index: 9999!important;
+    z-index: 999!important;
 }
 
 .navbar-brand {
@@ -372,6 +376,7 @@ textarea:focus {
     padding-top: 11px;
     padding-bottom: 11px;
     margin-bottom: 0;
+    background-color: #ffffff;
 }
 
 .banner .form-container select::-ms-expand {
@@ -512,6 +517,10 @@ textarea:focus {
     border-left: 4px solid #fff;
 }
 
+.seguros .row a {
+    outline: none;
+}
+
 .seguros .img-container,
 .seguros h5,
 .seguros p {
@@ -626,7 +635,7 @@ textarea:focus {
 
 .socios .col-sm-2 {
     padding: 0 5px;
-    height: 120px;
+    height: 150px;
 }
 
 /* CONTACTO */
@@ -736,6 +745,73 @@ textarea:focus {
     font-family: 'Lato', sans-serif;
 }
 
+
+/* MODAL */
+.modal .modal-dialog {
+    top: 60px;
+}
+
+.modal .modal-dialog .modal-content .modal-header .modal-banner {
+    height: 250px;
+}
+
+.modal .modal-dialog .modal-content .modal-header .banner-casa {
+    background: url(img/modal/seguro-casa.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.modal .modal-dialog .modal-content .modal-header .banner-vida {
+    background: url(img/modal/seguro-vida.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.modal .modal-dialog .modal-content .modal-header .banner-auto {
+    background: url(img/modal/seguro-auto.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.modal .modal-dialog .modal-content .modal-header .banner-medico {
+    background: url(img/modal/seguro-medico.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.modal .modal-dialog .modal-content .modal-body h2 {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    padding: 5px;
+}
+
+.modal .modal-dialog .modal-content .modal-body p {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+.modal .modal-dialog .modal-content .modal-footer {
+    text-align: center;
+}
+
+.modal .modal-dialog .modal-content .modal-footer a {
+    text-decoration: none!important;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 150px;
+    height: 25px;
+    line-height: 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #1e2e61;
+    border-radius: 8px;
+}
+
+
+
+
 /* FOOTER */
 
 footer .footer-top {
@@ -790,7 +866,7 @@ footer .footer-rights .phone::before {
     content: url(img/icons/phonewhite.png);
     position: relative;
     left: -3px;
-    top: 3px;
+    top: 2px;
 }
 
 /*** Parallax CSS ****/
@@ -849,6 +925,9 @@ footer .footer-rights .phone::before {
     .empresa {
         background: none;
     }
+    .socios .col-sm-2 {
+        height: 90;
+    }
 }
 
 @media(max-width: 767px) {
@@ -872,15 +951,18 @@ footer .footer-rights .phone::before {
         height: 40px;
     }
     .pre-header .social p {
+        position: initial;
+        display: block;
         padding-left: 10px;
         padding-right: 5px;
         font-size: 14px;
     }
-    .pre-header .social a {
-        margin: 0;
+    .pre-header .social p::before {
+        left: auto;
+        margin-left: -15px;
     }
-    .pre-header .social a:nth-child(2) {
-        margin-left: 5px;
+    .pre-header .social .col-xs-2 a {
+        margin: 0;
     }
     .navbar.navbar-top {
         margin-top: 80px;

@@ -4,7 +4,7 @@ $(document).ready(function () {
 });
 
 function initialize() {
-    if( $('#googleMap').attr('position') == 'agentes' ) {
+    if( $('#googleMap').data('position') == 'agentes' ) {
         var $lat = 28.651633,
             $long = -106.131215,
             $title = 'Agentes en Seguros';

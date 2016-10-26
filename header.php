@@ -29,7 +29,7 @@
                         <li class="active"><a href="#inicio" class="smoothScroll">INICIO</a></li>
                         <li><a href="#nosotros" class="smoothScroll">NOSOTROS</a></li>
                         <li><a href="#seguros" class="smoothScroll">SEGUROS</a></li>
-                        <li><a href="#agentes" class="smoothScroll">AGENTES</a></li>
+                        <li><a href="#agentes" class="smoothScroll">ALIADOS</a></li>
                         <li><a href="#contacto" class="smoothScroll">CONTACTO</a></li>
                     </ul>
                 </div>
